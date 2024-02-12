@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Protest+Riot&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    width: 100%;
+    /* background-color: #c00e4d; */
+    background-image: linear-gradient(45deg , rgb(186, 24, 70) ,rgb(130, 34, 53) ,rgb(255, 94, 172));
+    background-size: 300% 300%;
+    color: white;
+    animation: color 8s ease-in-out  infinite;
+}
+
+@keyframes color {
+    0%{
+        background-position: 0% 50% ;
+    }
+    50%{
+        background-position: 100% 50% ; 
+    }
+    100%{
+        background-position: 0% 50% ;  
+    }
+}
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+h3{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size:1rem;
+    background-image: linear-gradient(to right, rgb(0, 229, 255),rgb(68, 183, 255),rgb(220, 125, 255));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+span{
+    font-size:1rem
+}
+.content{
+    height: 80%;
+    width: 80%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+     flex-direction: column;
+}
+h1{
+    font-size:2.5rem;
+    font-family: 'Pacifico', cursive;
+    display: block;
+}
+.gif{
+    height:38%;
+    width: 20%;
+   display: flex;
+   align-items:center;
+   justify-content: center;
+   margin-right:20px;
+   position: relative;
+}
+.img1,.img2,.img3{
+    height:100%;
+    width: 100%;
+    object-fit: contain;
+}
+.img1{
+    display:block;
+}
+.img2{
+    position:absolute;
+    display: none;
+    height: 300%;
+    margin-top: 60px;
+}
+.img3{
+    display: none;
+}
+.buttons{
+    margin-top: 80px;
+    height: 100px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+} 
+.btn{
+    position: absolute;
+    display: flex;
+    cursor: pointer;
+    height:50px;
+    width: 150px; 
+    border-radius: 15px;
+    border: none;
+    font-size: 1.2rem; 
+    margin: 0 80px; 
+    align-items: center;
+    justify-content: center;
+    color:  #c0557e;
+    background-color: white;
+    font-family: 'Protest Riot', sans-serif;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgb(203, 13, 32);
+   
+}
+.btn-1{ 
+   right:50%;  
+}
+.btn-2{
+    right:14%;
+}
+.heart{
+    height: 40%;
+    width:20%;
+    position: absolute;
+    top: 60%;
+    animation: beat 2s linear infinite;
+    display: none;
+   
+}
+@keyframes beat {
+    0%{
+        transform: scale(1)
+    
+    }
+    80%{
+        transform: scale(0.9);
+        opacity: 0.6;
+    } 
+}
+.heart img{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+@media (max-width: 468px) {
+    .content{
+        width: 95%;
+    }
+    h1{
+        font-size:2rem;
+
+        width: 100%;
+    }
+    .gif{
+        width: 55%;
+    }
+    .buttons{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 10px;
+        width: 100%;
+    }
+    .btn{
+        display:flex;
+        flex-wrap: wrap;
+        position:absolute;
+        width: 30%;
+
+    }
+    .btn-1{
+      left: -10%;
+
+    }
+    .btn-2{
+        right:-10%;
+    }
+    .heart{
+    
+        height:30%;
+        width:40%;
+    }
+    .img3{
+        display:none;
+        position: absolute;
+        height: 190px;
+        top: 20px;
+        left: 20%;
+    }
+
+   
+}
